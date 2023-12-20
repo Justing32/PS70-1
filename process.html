@@ -9,24 +9,117 @@
   <div style="align-items: left; justify-content:left;" class="container-fluid">
     <h3 class="nav-title"> PS70: Intro to Digital Fabrication</h3>
     <div class="navbar-nav">
-      <h4><a class="nav-link" href="./index.html"><b>Home</b></a></h4>
-      <h4><a class="nav-link" href="./about.html"><b>About</b></a></h4>
-      <h4><a class="nav-link" href="./process.html"><b>Process</b></a></h4>
-      <h4><a class="nav-link" href="./finishedproduct.html"><b>Finished Product</b></a></h4>
-      <h4><a class="nav-link" href="./about.html"><b>Justin Glod</b></a></h4>
+      <h4><a class="nav-link" href="../index.html"><b>Home</b></a></h4>
+      <h4><a class="nav-link" href="../about.html"><b>About</b></a></h4>
+      <h4><a class="nav-link" href="../process.html"><b>Process</b></a></h4>
+      <h4><a class="nav-link" href="../finishedproduct.html"><b>Finished Product</b></a></h4>
+      <h4><a class="nav-link" href="../about.html"><b>Justin Glod</b></a></h4>
     </div>
   </div>
 </nav>
 
 <body>
 
-
 <xmp style="display:none;">
+
+<div class="container-fluid bg-3 text-center">
+  
+  
+  <h3> <b>Final Project</b></h3>
+
+</div>
+<h3> Process</h3>
+</div>
+<div> I first tackled the physical nozzle, which took the most amount of time. I modeled 6 different components in Fusion360 which came together to build the nozzle. Component 1 is a threaded bottle cap with a nozzle protruding from the center. I custom made the threads myself, using a standard cocacola bottle cap as reference. This was a tedious process, but worked well and ensured my connection from the nozzle to the bottle was secure and watertight. Component 2 connects to component 1 with a notch mechanism and redirects the liquid to reduce interference from air trying to escape the bottle. I added an air pipe into component 2 which goes down into the bottle, which also helps reduce air interference and ensures a steady pouring flow. Component 3 also connects to component 2 with a notch mechanism, and connects the base of the nozzle to the water-wheel mechanism. Component 4 is the water-wheel holder, it's securely attached to component 3 and also includes a nozzle at the end of it, in which the liquid exits. Component 5 is the water wheel, which was precisely measured to fit in the wheel holder and still be able to spin from liquid force. The water wheel and wheel holder were difficult to get correct, however I eventually got the wheel to spin at a steady rate from the liquid force. Component 6 is a cap for the end of the wheel holder. I needed to be able to assemble this product piece by piece, so a cap for the wheel holder was necessary for me to get the water wheel in the component. I thoroughly enjoyed the 3D modeling and printing involved with this project.
+</div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4">
+      <img src="cmp1.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="cmp12.png" style="align-items: center; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="cmp2.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+</div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4">
+      <img src="cmp3.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="cmp4.png" style="align-items: center; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="cmp42.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+</div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4">
+      <img src="cmp5.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="cmp51.png" style="align-items: center; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="cmp6.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+</div>
+
+</div>
+<div> After I had my components printed out and fitting nicely, it was time to make my product electronic and code the device. Within the water wheel, I attached two magnets–one on one of the legs of the wheel and another in the protruding end which inserts into the wheel holder. The idea was to have a hall sensor attached to the wheel holder, which would detect each time the magnet attached to the water wheel made contact with it. The other magnet is meant to lock the water wheel, with help from an electromagnet. What I needed to figure out was the relationship between wheel rotations and the amount of liquid poured. After a few trials, I found that it was impossible to know how many rotations the wheel turned per ounce without a see-through product–so I audibled. My new algorithm uses seconds instead of rotations. Once the magnet meets the sensor, the liquid pours for x amount of seconds, vs x amount of wheel rotations. I found that it took 16 seconds to pour 8 ounces with my nozzle, bringing my algorithm to 1oz/2sec. I programmed a display and three buttons, along with the hall sensor and electromagnet, on Arduino. One button adds ounces to the display, another is an enter button, and the last is a reset button. For example, if I input 4 oz into my display and hit enter, once the magnet is close enough to the sensor, the nozzle will pour for 8 seconds and then lock - giving the user 4 ounces. And that was essentially it!
+</div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4">
+      <img src="code1.png" style="align-items: left; justify-content:center;" width="400px" height="373px">
+    </div>
+    <div class="col-sm-4">
+      <img src="code2.png" style="align-items: center; justify-content:center;" width="400px" height="330px">
+    </div>
+    <div class="col-sm-4">
+      <img src="code3.png" style="align-items: left; justify-content:center;" width="400px" height="536px">
+    </div>
+</div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4">
+      <img src="board.png" style="align-items: left; justify-content:center;" width="400px" height="533px">
+    </div>
+    <div class="col-sm-4">
+      <img src="proj.png" style="align-items: center; justify-content:center;" width="711px" height="533px">
+    </div>
+</div>
+
+<h3> Failure</h3>
+</div>
+<div> I attempted to bring this project home and finish it in Michigan. My last step was to attach my electronics to my nozzle. I could not access a soldering station and ended up using a different type of wire connector from Lowes. The wire connector broke my hall sensor, essentially terminating the project. I will complete this one day!
+
+
+</div>
+</div>
+<div class="row">
+ <div class="col-sm-4">
+      <video controls>
+      <source src="pour.mov" type="video/mp4" style="align-items: left; justify-content:center;" width="400px" height="533px">
+      </video> 
+  </div>
+
+
+
 
 </xmp>
 </body>
 
-<script src="./strapdown.js"></script>
+<script src="../strapdown.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 
 </html>
